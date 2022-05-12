@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset ="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center>
+<h1>JavaScript Variables</h1>
+<p>Scientific calculator</p>
+<button onclick="add()"> ADDITION</button>
+<button onclick="sub()"> Subtraction</button>
+<button onclick="mul()"> Multiplication</button>
+<button onclick="divide()"> Division</button>
+<button onclick="mode()"> Modulus</button>
+<button onclick="pow()"> power</button>
+<button onclick="exponent()"> Exponentiation</button>
+<script>
+    function add(){
+        var x=3;
+        var y=5;
+        var z=x+y;
+        document.write(z);
+    }
+    function sub(){
+        var x=4;
+        var y=6;
+        var z=x-y;
+        document.write(z);
+    }
+    function mul(){
+        var x=1;
+        var y=5;
+        var z=x*y;
+        document.write(z);
+    }
+    function divide(){
+        var x=3;
+        var y=5;
+        var z=x/y;
+        document.write(z);
+    }
+    function mode(){
+        let x=3;
+        let y=5;
+        let z=x%y;
+        document.write(z);
+        
+    }
+    function pow(){
+        let x=3;
+        
+        let z=Math.pow(x,2);
+        document.write(z);
+    }
+    function exponent(){
+        let x=3;
+        
+        let z=x**2;
+        document.write(z);
+    }
+</script>
