@@ -1,26 +1,35 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <title>result</title>
 <meta charset ="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
     <script>
+         let d = prompt("Enter Your full Name ");
          let a = prompt("Enter Your Totla Number");
          let b = prompt("Enter Your Obtain Number");
+        
         a = parseInt(a);
          b = parseInt(b);
-         let result = b / a * 100;
-         if (result > 33) {
+         let result = b / a * 500;
+         if (result > 150) {
             document.write("pass");
          } else {
              document.write("Fail");
          }
-         document.write(b / a * 100);
+         let parcentage = b/a*c;
+         if (result > 393) {
+             document.write("good");
+         } else {
+             document.write("very good");
+         }
+         document.write(b / a * 500);
          document.write(typeof a);
          document.write(typeof b);
-        let day = prompt("ENTER DAY NUMBER");
+        let day = prompt("ENTER DAY No");
         day = parseInt(day);
         switch (day) {
             case 1:
@@ -28,6 +37,46 @@
                 break;
             case 2:
                 document.write("Tuesday");
+                break;
+                case 3:
+                document.write("Wednesday");
+                break;
+                case 4:
+                document.write("Thursday");
+                break;
+                case 5:
+                document.write("Friday");
+                break;
+                case 6:
+                document.write("saturday");
+                break;
+                case 7:
+                document.write("Sunday");
+                break;
+        }
+        let Month = prompt("ENTER Month No");
+        Month = parseInt(Month);
+        switch (Month) {
+            case 1:
+                document.write("Januray");
+                break;
+                case 2:
+                document.write("Fab");
+                break;
+                case 3:
+                document.write("Mar");
+                break;
+                case 4:
+                document.write("Apri");
+                break;
+                case 5:
+                document.write("May");
+                break;
+                case 6:
+                document.write("June");
+                break;
+                case 7:
+                document.write("July");
                 break;
         }
     </script>
