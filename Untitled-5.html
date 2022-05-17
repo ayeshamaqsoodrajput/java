@@ -1,26 +1,31 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
+
     <script>
-        let Table = prompt("ENTER Table Number");
+        let Table = prompt("Enter Table Number");
         Table = parseInt(Table);
 
         for (let a = 1; 11 > a; a++) {
             document.write(Table +"x"+ a+"="+Table * a+ "<br>");
         }
-        // let lang =2;
-        // for( let a= 1 ;21> a; a++){
-        //     console.log(a*lang);
-        //     document.write("2 x",a,"=", 2*a,"<br>");
-        // }
-    </script>
+        </script>
+        <script>
+        var totalrows =20;
+        var output ="";
+        for( var i = 1; i <= totalrows; i++){
+            for (var j = 1; j <= i; j++){
+                output += j + " ";
+            }
+            document.write(output);
+            output ="<br>";
+        }
+        </script>
 </body>
 
 </html>
