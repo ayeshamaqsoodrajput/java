@@ -8,17 +8,63 @@
     <title>todoinput</title>
 </head>
 <style>
-    
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    #todoinput{
+        width: 60%;
+        height: 45px;
+    }
     #btn {
-background-color: blue;
+        background-color: red;
+        color: white;
+        width: 85px;
+        height: 40px;
+        margin-left: 2%;
+        border-color: rgb(8, 8, 8);
+    }
+
+    #btn:hover {
+        background-color: aqua;
+    }
+
+    .main input {
+        width: 40%;
+        height: 40px;
+        margin-top: 4%;
+        margin-left: 3%;
+    }
+
+    #unorder {
+        background-color: rgba(0, 0, 0, 0.147);
+        height: 50vh;
+        width: 100%;
+        margin-top: 2%;
+    }
+    .main button{
+        background-color: rgba(43, 98, 8, 0.796);
+        color: white;
+        width: 85px;
+        height: 40px;
+        margin-left: 2%;
+        border-color: black;
+    }
+    .main button :hover {
+        background-color: aqua;
     }
 </style>
-<body>
-    <input type="text" id="todoinput">
-    <button id="btn">Add Me</button>
-    <ul id="unorder">
 
-    </ul>
+<body>
+    <center>
+    <h1>😲  𝕋𝕆𝔻𝕆𝕃𝕀𝕊𝕋  😲 </h1>
+    <div class="main">
+        <input type="text" placeholder="Enter Text" id="todoinput">
+        <button id="btn">Click Me</button>
+        <ul id="unorder">
+        </ul>
+    </div>
+</center>
     <script>
         let input = document.getElementById('todoinput');
         let btn = document.getElementById('btn');
@@ -61,7 +107,7 @@ background-color: blue;
 
 
         })
-    </script> 
+    </script>
 </body>
 
 </html>
