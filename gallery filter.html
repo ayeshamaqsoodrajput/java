@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery filter</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-2">
                 <ul class="d-flex justify-content-center bg-primary align-item-center list-unstyled">
-                    <li class="item p-2 data-item=Laptop">
-                        <img src="1.jpg" class="img-fluid" alt="...">    
-                        Laptop
-                    </li>
-                    <li class="item p-2 data-item=Bag">Bag</li>
-                    <li class="item p-2 data-item=Shoes">Shoes</li>
+                    <li class="item p-2 " data-item=Laptop>All</li>
+                    <li class="item p-2 " data-item=Laptop>Laptop </li>
+                    <li class="item p-2 " data-item=Bag>Bag</li>
+                    <li class="item p-2 " data-item=Shoes>Shoes</li>
                 </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 myImg" data-filter="laptop">
+                <img src="1.jpg" width="100" alt="">
+            </div>
+            <div class="col-md-3 myImg" data-filter="shoes">
+                <img src="1.jpg" width="100" alt="">
+            </div>
+            <div class="col-md-3 myImg" data-filter="bag">
+                <img src="1.jpg" width="100" alt="">
+            </div>
+            <div class="col-md-3 myImg" data-filter="laptop">
+                <img src="1.jpg" width="100" alt="">
             </div>
         </div>
     </div>
     <script>
         let item = document.getElementsByClassName('item');
-            // console.log (item);
-        for(let a=0;item.length>a;a++){
-item[a].addEventListener('click',function(){
-    for(let k=0;item.length>k;k++){
- item[k].classList.remove('bg-danger');
-    };
-    item[a].classList.add('bg-danger');
-    let getitem = item[a].getAttribute('data-item');
-    console.log(getitem);
-});
+        // console.log (item);
+        for (let a = 0; item.length > a; a++) {
+            item[a].addEventListener('click', function () {
+                for (let k = 0; item.length > k; k++) {
+                    item[k].classList.remove('bg-danger');
+                };
+                item[a].classList.add('bg-danger');
+                let getitem = item[a].getAttribute('data-item');
+                console.log(getitem);
+                let myImg = item[a].getElementsByClassName('myImg');
+                console.log(myImg);
+                for (let f = 0; myImg.length > f; f++) {
+                    let filter = myImg[f].getAttribute('data-filter');
+                    myImg[f].style.display = 'none';
+                    console.log(filter);
+                    if (getitem == filter) {
+                        myImg[f].style.display = 'block';
+                    }
+                    if (getitem == 'all') {
+                        myImg[f].style.display = 'block';
+                    }
+                }
+            });
         };
     </script>
+    <!-- 
+        
+     -->
 </body>
 
 </html>

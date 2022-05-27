@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <!---  <style>
+        .ParentIMG{
+            height: 50vh;
+        }
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ParentIMG">
+<img src="1.jpg" width="100%"height="100%" alt="">
+<img src="1.jpg" width="100%"height="100%" alt="">
+ <img src="1.jpg" width="100%"height="100%" alt="">
+<img src="1.jpg" width="100%"height="100%" alt=""> 
+         </div>
+    </div>
+</div>
+<button onclick="next(1)">next</button>
+<button onclick="next(-1)">Pre</button>
+    <script>
+let arr='0';
+function next(n){
+    arr= arr+n;
+     console.log(arr);
+    slider(arr);
+}
+
+let img=document.getElementsByTagName('img');
+// console.log(img[0]);
+slider(0);
+
+function slider(r){
+   for(let a=0;img.length>a;a++){
+        img[a].style.display='none';
+    }
+
+    img[r].style.display='block';
+}
+    </script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        .ParentIMG {
+            height: 90vh;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ParentIMG">
+                <img src="bag.jpg" height="100%" width="100%" alt="">
+                <img src="shoes.jpg" height="100%" width="100%" alt="">
+                <img src="watch.jpg" height="100%" width="100%" alt="">
+                <img src="sandals.jpg" height="100%" width="100%" alt="">
+                <img src="mak.jpg.crdownload" height="100%" width="100%" alt="">
+                <img src=".jpg" height="100%" width="100%" alt="">
+                <img src="images/bruno-van-der-kraan-VRERJ5Mjp4c-unsplash.jpg" height="100%" width="100%" alt="">
+                <img src="images/bruno-van-der-kraan-VRERJ5Mjp4c-unsplash.jpg" height="100%" width="100%" alt="">
+
+
+            </div>
+        </div>
+    </div>
+    <ul id="unorder">
+        <li></li>
+    </ul>
+
+
+
+
+    <button onclick="next(1)">Nxt</button>
+    <button onclick="next(-1)">Pre</button>
+    <script>
+        let img = document.getElementsByTagName('img');
+
+        let ul = document.getElementById('unorder');
+        for (let i = 0; img.length > i; i++) {
+            let button = document.createElement("button");
+            button.innerHTML = 'Add me';
+            button.setAttribute('onclick', 'silder('+i+')');
+            console.log(button);
+            ul.appendChild(button);
+
+            // ul.append(i);
+        }
+        console.log(img);
+
+        let arr = 0;
+
+
+        function next(n) {
+            arr = arr + n;
+            if (arr >= img.length) {
+                arr = 0;
+            }
+            if (arr < 0) {
+                arr = img.length - 1;
+            }
+            console.log(arr);
+            silder(arr);
+        }
+        silder(0);
+
+        function silder(r) {
+            for (let a = 0; img.length > a; a++) {
+                img[a].style.display = 'none';
+
+            }
+
+            img[r].style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
