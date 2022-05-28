@@ -84,10 +84,6 @@ function slider(r){
     <ul id="unorder">
         <li></li>
     </ul>
-
-
-
-
     <button onclick="next(1)">Nxt</button>
     <button onclick="next(-1)">Pre</button>
     <script>
@@ -96,7 +92,7 @@ function slider(r){
         let ul = document.getElementById('unorder');
         for (let i = 0; img.length > i; i++) {
             let button = document.createElement("button");
-            button.innerHTML = 'Add me';
+            button.innerHTML = 'Click';
             button.setAttribute('onclick', 'silder('+i+')');
             console.log(button);
             ul.appendChild(button);
