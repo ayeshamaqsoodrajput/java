@@ -24,11 +24,11 @@
     }
 
     .calculator {
-        background: linear-gradient(to left, rgb(155, 152, 152), rgb(90, 89, 88));
+        background: linear-gradient( rgb(155, 152, 152), rgb(90, 89, 88));
         display: grid;
         justify-content: center;
         align-content: center;
-        min-height: 100vh;
+        height: 100vh;
         grid-template-columns: repeat(4, 100px);
         grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     }
@@ -37,7 +37,6 @@
         cursor: pointer;
         font-size: 3rem;
         border: 1px solid white;
-        outline: none;
         background-color: rgba(255, 255, 255, .75);
     }
 
@@ -45,7 +44,7 @@
         background-color: rgb(255, 255, 255, .9);
     }
 
-    .span-two {
+    .span {
         grid-column: span 2;
     }
 
@@ -73,14 +72,15 @@
 </style>
 <!--jav-->
 <script>
-    const numberButtons = document.querySelectorAll('[date-number]')
-    const operationButtons = document.querySelectorAll('[date-operation]')
+    
+    const numberbuttons = document.querySelectorAll('[date-number]')
+    const operationbuttons = document.querySelectorAll('[date-operation]')
     const equalsbuttons = document.querySelectorAll('[date-equals]')
     const deletebuttons = document.querySelectorAll('[date-delete]')
     const allclearbuttons = document.querySelectorAll('[date-all-clear]')
     const preTextElement = document.querySelectorAll('[date-pre]')
     const currentTextElement = document.querySelectorAll('[date-current]')
-    
+
 </script>
 <!---->
 
@@ -90,7 +90,7 @@
             <div date-pre class="pre"></div>
             <div date-current class="current"></div>
         </div>
-        <button date-all-clear class="span-two">AC</button>
+        <button date-all-clear class="span">AC</button>
         <button date-delete>DEL</button>
         <button date-operation>/</button>
         <button date-number>1</button>
@@ -107,7 +107,7 @@
         <button date-operation>-</button>
         <button date-operation>.</button>
         <button date-number>0</button>
-        <button date-equals class="span-two">=</button>
+        <button date-equals class="span">=</button>
     </div>
 </body>
 
