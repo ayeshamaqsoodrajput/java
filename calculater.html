@@ -33,51 +33,62 @@
         grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     }
 
-    .calculator > button {
+    .calculator>button {
         cursor: pointer;
         font-size: 3rem;
-        border: 1px solid  white;
+        border: 1px solid white;
         outline: none;
         background-color: rgba(255, 255, 255, .75);
     }
 
-    .calculator > button:hover {
-       background-color: rgb(255, 255, 255, .9);
+    .calculator>button:hover {
+        background-color: rgb(255, 255, 255, .9);
     }
-    .span-two{
+
+    .span-two {
         grid-column: span 2;
     }
-    .output{
-grid-column: 1/ -1;
-background-color: black;
-display: flex;
-align-items: flex-end;
-justify-content: space-around;
-flex-direction: column;
-padding: 10px;
-word-wrap: break-word;
-word-break: break-all;
+
+    .output {
+        grid-column: 1/ -1;
+        background-color: black;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
     }
-    .output .pre{
-        color:azure;
+
+    .output .pre {
+        color: azure;
         font-size: 1.5rem;
     }
-    .output .current{
-        color:white;
+
+    .output .current {
+        color: white;
         font-size: 2.5rem;
     }
 </style>
 <!--jav-->
 <script>
-
+    const numberButtons = document.querySelectorAll('[date-number]')
+    const operationButtons = document.querySelectorAll('[date-operation]')
+    const equalsbuttons = document.querySelectorAll('[date-equals]')
+    const deletebuttons = document.querySelectorAll('[date-delete]')
+    const allclearbuttons = document.querySelectorAll('[date-all-clear]')
+    const preTextElement = document.querySelectorAll('[date-pre]')
+    const currentTextElement = document.querySelectorAll('[date-current]')
+    
 </script>
 <!---->
+
 <body>
     <div class="calculator">
         <div class="output">
             <div date-pre class="pre"></div>
             <div date-current class="current"></div>
-
         </div>
         <button date-all-clear class="span-two">AC</button>
         <button date-delete>DEL</button>
