@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculater</title>
+    <title>Calculator</title>
 </head>
 <!--CSS-->
 <style>
@@ -13,24 +13,23 @@
     *::before,
     *::after {
         box-sizing: border-box;
-        font-family: Gotham Rounded, sans-serif;
+        font-family: sans-serif;
         font-weight: normal;
     }
 
     * {
         padding: 0%;
         margin: 0%;
-
     }
 
     .calculator {
-        background: linear-gradient( rgb(155, 152, 152), rgb(90, 89, 88));
+        background: linear-gradient(rgb(58, 57, 57), rgb(101, 98, 95));
         display: grid;
         justify-content: center;
         align-content: center;
         height: 100vh;
         grid-template-columns: repeat(4, 100px);
-        grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+        grid-template-rows: minmax(125px, auto) repeat(5, 100px);
     }
 
     .calculator>button {
@@ -50,14 +49,11 @@
 
     .output {
         grid-column: 1/ -1;
-        background-color: black;
+        background-color: rgb(2, 2, 2);
         display: flex;
         align-items: flex-end;
         justify-content: space-around;
         flex-direction: column;
-        padding: 10px;
-        word-wrap: break-word;
-        word-break: break-all;
     }
 
     .output .pre {
@@ -72,7 +68,7 @@
 </style>
 <!--jav-->
 <script>
-    
+
     const numberbuttons = document.querySelectorAll('[date-number]')
     const operationbuttons = document.querySelectorAll('[date-operation]')
     const equalsbuttons = document.querySelectorAll('[date-equals]')
